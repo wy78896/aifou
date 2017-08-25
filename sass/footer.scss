@@ -1,0 +1,54 @@
+.content {
+    padding: 50px 0 100px 0;
+    background-color: #333;
+    color: #999;
+    height: 195px;
+    .w{
+        padding: 0,41.5px;
+        .help{
+            padding-left: 70px;
+            float: left;
+            .c{
+                overflow: hidden;
+                dl{
+                width: 180px;
+                float: left;
+                    dt{
+                        margin-bottom: 10px;
+                        font-size: 18px;
+                        color: #e5e5e5;
+                    }
+                    dd a{
+                        line-height: 30px;
+                        font-size: 14px;
+                        color: #999;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .copy{
+                margin-top: 18px;
+                line-height: 20px;
+                font-size: 12px;
+                color: #666;
+                a{
+                    color: #666;
+                }
+            }
+        }
+        .about{
+            width: 480px;
+            margin-right: 50px;
+            float: right;
+            padding: 0 20px;
+            .servers div{
+                width: 100%;
+                img{
+                    float: right;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}

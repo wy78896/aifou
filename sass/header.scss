@@ -1,0 +1,108 @@
+ $width:1263px;
+ $height:80px;
+ *{margin: 0;padding: 0;}
+ a{
+    text-decoration: none;
+}
+ .header{
+     width: $width;
+     height: $height;
+     border-bottom: 1px solid #e5e5e5;
+ }
+ .logo{
+     display: block;
+     margin: 0 auto;
+     line-height: 80px;
+     margin-left: 40px;
+     width: 141px;
+     height: 46px;
+     padding: 17px 0;
+     float: left;
+     
+ }
+
+.title{
+    list-style: none;
+    float: left;
+    margin-left: 40px;
+    height: 80px;
+    line-height: 80px;
+}
+.title li{
+    float: left;
+    padding: 0 20px;
+    
+}
+.title li a{
+    color: #333;
+}
+.title li:hover a{
+    color: #23A96F;
+}
+
+.cart{
+    float: right;
+    height: 80px;
+    display: inline-block;
+    line-height: 80px;
+    padding: 0 20px;
+    a{
+        color: #333;
+        padding-left: 20px;
+    }
+    .iconfont{
+        display: inline-block;
+        font-size: 18px;
+    }
+}
+.cart:hover a{
+    color: #23A96F;
+}
+.user{
+    float: right;
+    div{
+        height: 80px;
+        display: inline-block;
+        line-height: 80px;
+        padding: 0 20px;
+    }
+    div a{
+        color: #333;
+    }
+}
+
+.user div:hover a{
+    color: #23A96F;
+}
+
+
+.headerW{
+    width: $width;
+    height: 62px;
+    overflow: hidden;
+    ul{
+        list-style: none;
+        width: 416px;
+        height: 60px;
+        margin: 0 auto;
+        
+        li{
+            float: left;
+            display: inline-block;
+            height: 60px;
+            line-height: 60px;
+            a{
+                height: 60px;
+                line-height: 60px;
+                display: inline-block;
+                padding: 0 30px;
+                color: #333;
+            }
+        }
+        li:hover a{
+            color: #23A96F;
+            border-bottom: 2px solid #23A96F;
+        }
+    }
+    
+}

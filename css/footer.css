@@ -1,0 +1,44 @@
+.content {
+  padding: 50px 0 100px 0;
+  background-color: #333;
+  color: #999;
+  height: 195px; }
+  .content .w {
+    padding: 0,41.5px; }
+    .content .w .help {
+      padding-left: 70px;
+      float: left; }
+      .content .w .help .c {
+        overflow: hidden; }
+        .content .w .help .c dl {
+          width: 180px;
+          float: left; }
+          .content .w .help .c dl dt {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #e5e5e5; }
+          .content .w .help .c dl dd a {
+            line-height: 30px;
+            font-size: 14px;
+            color: #999;
+            text-decoration: none; }
+      .content .w .help .copy {
+        margin-top: 18px;
+        line-height: 20px;
+        font-size: 12px;
+        color: #666; }
+        .content .w .help .copy a {
+          color: #666; }
+    .content .w .about {
+      width: 480px;
+      margin-right: 50px;
+      float: right;
+      padding: 0 20px; }
+      .content .w .about .servers div {
+        width: 100%; }
+        .content .w .about .servers div img {
+          float: right;
+          width: 100px;
+          height: 100px; }
+
+/*# sourceMappingURL=footer.css.map */
