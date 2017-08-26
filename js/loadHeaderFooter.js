@@ -3,7 +3,6 @@ define(["jquery","cookie"],function($){
 		type:'get',
 		url:"/html/include/header.html",
 		success:function(data){
-			console.log(data);
 			var _username = $.cookie("loginUser");
 			if(_username){//存在登录成功的用户
 				$(data).filter(".login")

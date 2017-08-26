@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.banner {
+  width: 1263px;
+  height: 369px;
+  position: relative; }
+  .banner ul {
+    list-style: none;
+    position: relative; }
+    .banner ul li {
+      width: 1263px;
+      height: 369px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; }
+      .banner ul li a {
+        width: 1263px;
+        height: 369px;
+        position: relative;
+        display: block;
+        overflow: hidden; }
+        .banner ul li a img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0; }
+  .banner #prev {
+    position: absolute;
+    display: inline-block;
+    font-size: 60px;
+    left: 20%;
+    top: 50%;
+    color: #333;
+    margin-top: -30px; }
+  .banner #next {
+    position: absolute;
+    display: inline-block;
+    font-size: 60px;
+    right: 20%;
+    top: 50%;
+    color: #333;
+    margin-top: -30px; }
+  .banner #pages {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    width: 216px;
+    height: 36px;
+    margin-left: -108px;
+    text-align: center; }
+    .banner #pages div {
+      margin: 12px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 6px;
+      background: #fefefe;
+      box-shadow: 1px 1px 6px 1px #999 inset; }
+    .banner #pages div.current {
+      background: #ff9900;
+      box-shadow: 1px 1px 6px 1px #eb6100 inset; }
+
+.ad {
+  padding: 50px 0; }
+  .ad .ad-m {
+    width: 1180px;
+    height: 530px;
+    margin: 0 41.5px; }
+    .ad .ad-m .box {
+      width: 1200px;
+      margin-right: -10px;
+      margin-left: -10px; }
+      .ad .ad-m .box a.big {
+        display: block;
+        float: left;
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 265px;
+        width: 50%; }
+      .ad .ad-m .box a.s {
+        display: block;
+        float: left;
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 265px;
+        width: 33.33333333%; }
+      .ad .ad-m .box a:hover img {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        transform: translate3d(0, -2px, 0); }
+
+/*# sourceMappingURL=index.css.map */

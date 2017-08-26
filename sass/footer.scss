@@ -43,11 +43,39 @@
             padding: 0 20px;
             .servers div{
                 width: 100%;
+                overflow: hidden;
                 img{
                     float: right;
                     width: 100px;
                     height: 100px;
                 }
+            }
+            .servers p{
+                margin-top: 10px;
+                text-align: right;
+                a{
+                    display: inline-block;
+                    width: 100px;
+                    height: 22px;
+                    line-height: 22px;
+                    color: #999;
+                    vertical-align: middle;
+                    
+                }
+                .weibo{
+                    border-right: 1px solid #666;
+                    text-align: left;
+                    i{
+                        font-size: 22px;
+                        
+                    }
+                }
+                .wechat{
+                    text-align: center;
+                }
+            }
+            .servers .time{
+                color: #666;
             }
         }
     }
