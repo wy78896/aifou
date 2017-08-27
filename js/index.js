@@ -1,5 +1,12 @@
 require(["config"],function(){
-	require(["jquery","load"],function(){
+	require(["jquery","template","load"],function($,template){
+		
+		$.getJSON("/mock/recommend.json",function(data){
+			var html = template("prod_item",{list:data});
+			console.log(html)
+			$(html).appendTo(".product");
+		})
+		
 		var lis = $(".banner").children("ul").children("li"),
 			len = lis.length,
 			currentIndex = 0, // 当前显示图片的索引

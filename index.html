@@ -34,6 +34,51 @@
 			</div>
 		</div>
 	</div>
+	<!--为您推荐-->
+	<div class="recommend">
+		<div class="ww">
+			<div class="box-hd">
+				<h3>为您推荐</h3>
+				<a href="#">更多</a>
+			</div>
+			<div class="product">
+				
+			</div>
+			<div class="box-hd">
+				<h3>为您推荐</h3>
+				<a href="#">更多</a>
+			</div>
+			<div class="product"></div>
+		</div>	
+	</div>
+	
+	<!--底部推荐-->
+	<div class="ad-other">
+		<div class="box-hd">
+			<h3>为您推荐</h3>
+		</div>
+		<div class="ad_pic">
+			<a href="#"><img src="images/ad_1.png"/></a>
+			<a href="#"><img src="images/ad_2.png"/></a>
+		</div>
+	</div>
+	
 	<div class="footer" style="margin-top: 100px;"></div>
+	
+	
+	<script type="text/html" id="prod_item">
+		<%for(var i = 0;i<list.length;i++){
+			var prod = list[i];
+		%>
+		<div class="pro_item">
+			<a href="#" class="prod">
+				<img src="<%= prod.imgSrc %>"/>
+				<p class="brand"><%= prod.brand %></p>
+				<p class="name"><%= prod.name %></p>
+				<p class="price"><%= prod.price %></p>
+			</a>
+		</div>
+		<% } %>
+	</script>
 </body>
 </html>

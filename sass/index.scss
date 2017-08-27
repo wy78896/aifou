@@ -114,3 +114,131 @@
         }
     }
 }
+
+
+.recommend{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 68px;
+    background-color: #f8f8f8;
+    .ww{
+        width: 1180px;
+        margin: 0 41.5px;
+        .box-hd{
+            overflow: hidden;
+            padding-top: 43px;
+            padding-bottom: 3px;
+            h3{
+                display: inline-block;
+                float: left;
+                font-size: 28px;
+                font-weight: normal;
+                vertical-align: bottom;
+            }
+            a{
+                display: inline-block;
+                margin-top: 13px;
+                vertical-align: bottom;
+                text-decoration: underline;
+                color: #484848;
+                font-size: 18px;
+                float: right;
+            }
+        }
+        .product{
+            overflow: hidden;
+            
+            width: 1200px;
+            height: 768px;
+            margin-right: -10px;
+            margin-left: -10px;
+            .pro_item{
+                padding-right: 0;
+                padding-left: 6px;
+                padding-bottom: 10px;
+                height: 354px;
+                margin-bottom: 10px;
+                width: 294px;
+                float: left;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                .prod:hover{
+                    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                    transition: all .2s linear;
+                    transform: translate3d(0,-2px,0);
+                }
+                .prod{
+                    
+                    display: block;
+                    height: 268px;
+                    padding: 43px 0;
+                    background: #fff;
+                    text-decoration: none;
+                    color: #333;
+                    img{
+                        display: block;
+                        width: 206px;
+                        margin: 0 44px 20px;
+                    }
+                    p{
+                        display: block;
+                        text-align: center;
+                        font-size: 16px;
+                        padding: 0 7.36842105263158%;
+                        word-break: keep-all;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    p.price{
+                            font-size: 14px;
+                            color: #FF9800;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.ad-other{
+    width: 1180px;
+    margin: 0 41.5px;
+    .box-hd{
+        padding-top: 43px;
+        padding-bottom: 3px;
+        h3{
+            display: inline-block;
+            font-size: 28px;
+            font-weight: normal;
+            vertical-align: bottom; 
+        }
+    }
+    .ad_pic{
+        overflow: hidden;
+        width: 1200px;
+        margin-right: -10px;
+        margin-left: -10px;
+        a{
+            padding-right: 0;
+            padding-left: 6px;
+            padding-bottom: 10px;
+            display: block;
+            margin-top: 10px;
+            width: 594px;
+            height: 196px;
+            float: left;
+            text-decoration: none;
+            img{
+                width: 594px;
+                height: 196px;
+            }
+
+        }
+        a:hover img{
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            transform: translate3d(0,-2px,0);
+        }
+    }
+}

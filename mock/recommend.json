@@ -1,0 +1,50 @@
+[
+	{
+		"imgSrc":"/images/p1.png",
+		"brand":"Apple",
+		"name":"iPhone 6s",
+		"price":"￥2499.00"
+	},
+	{
+		"imgSrc":"/images/p2.png",
+		"brand":"Apple",
+		"name":"iPhone 6s Plus",
+		"price":"￥2949.00"
+	},
+	{
+		"imgSrc":"/images/p3.png",
+		"brand":"Apple",
+		"name":"iPhone 6",
+		"price":"￥1999.00"
+	},
+	{
+		"imgSrc":"/images/p4.png",
+		"brand":"Apple",
+		"name":"iPhone 7",
+		"price":"￥3699.00"
+	},
+	{
+		"imgSrc":"/images/p5.jpg",
+		"brand":"Apple",
+		"name":"iPhone 7 Plus",
+		"price":"￥4149.00"
+	},
+	{
+		"imgSrc":"/images/p6.png",
+		"brand":"Apple",
+		"name":"iPhone 6 Plus",
+		"price":"￥2449.00"
+	},
+	{
+		"imgSrc":"/images/p7.jpg",
+		"brand":"苹果",
+		"name":"MacBook Air(11'br,Early 2015)",
+		"price":"3999.00"
+	},
+	{
+		"imgSrc":"/images/p8.png",
+		"brand":"Apple",
+		"name":"iPhone 5s",
+		"price":"￥1399.00"
+	}
+]
