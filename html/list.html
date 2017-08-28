@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/css/header.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/list.css"/>
+	<link rel="stylesheet" type="text/css" href="/font/iconfont.css"/>
+	<script type="text/javascript" src="/lib/requirejs/require.js" data-main="/js/list"></script>
+
+</head>
+<body>
+	<div class="head"></div>
+	<div class="list_item">
+		<aside class="aside">
+			<h3>手机</h3>
+			<dl class="n">
+				<dt><span>Apple</span></dt>
+				<dd><a href="#">iPhone 5s</a></dd>
+				<dd><a href="#">iPhone 5c</a></dd>
+				<dd><a href="#">iPhone 5</a></dd>
+				<dd><a href="#">iPhone 6 Plus</a></dd>
+				<dd><a href="#">iPhone 6s</a></dd>
+				<dd><a href="#">iPhone 6s Plus</a></dd>
+				<dd><a href="#">iPhone 7</a></dd>
+				<dd><a href="#">iPhone 7 Plus</a></dd>
+			</dl>
+			<dl>
+				<dt><span>三星</span></dt>
+				<dd><a href="#">Galaxy S8</a></dd>
+				<dd><a href="#">Galaxy S8+</a></dd>
+				<dd><a href="#">Galaxy S7</a></dd>
+				<dd><a href="#">Galaxy S7 Edge</a></dd>
+				<dd><a href="#">Galaxy S6</a></dd>
+				<dd><a href="#">Galaxy S6 Edge</a></dd>
+				<dd><a href="#">Galaxy S6 Edge+</a></dd> 
+				<dd><a href="#">Galaxy Note 4</a></dd>
+				<dd><a href="#">Galaxy Note 5</a></dd>
+				<dd><a href="#">Galaxy Note 7</a></dd>
+			</dl>
+			<dl>
+				<dt><span>小米</span></dt>
+				<dd><a href="#">小米手机6</a></dd>
+				<dd><a href="#">小米手机5</a></dd>
+				<dd><a href="#">小米5s</a></dd>
+				<dd><a href="#">小米Note 2</a></dd>
+			</dl>
+			<dl>
+				<dt><span>OPPO</span></dt>
+				<dd><a href="#">OPPO R11</a></dd>
+				<dd><a href="#">OPPO R9s</a></dd>
+			</dl>
+		</aside>
+		<article class="main">
+			<div class="phead">
+				<div class="sort">
+					<a>
+						<span>综合排序</span>
+						<i></i>
+					</a>
+					<ul>
+						<li><a href="#">价格从低到高</a></li>
+						<li><a href="#">价格从高到低</a></li>
+					</ul>
+				</div>
+			</div>
+			<ul class="product-list">
+				
+			</ul>
+		</article>
+	</div>
+	<div class="footer" style="margin-top: 100px;"></div>
+	<script type="text/html" id="prod_item">
+		<%for(var i = 0;i<list.length;i++){
+			var prod = list[i];
+		%>
+		<li class="g">
+			<a href="#">
+				<p class="pic"><img src="<%= prod.imgSrc %>"/></p>
+				<span class="name"><%= prod.title %></span>
+				<em class="price"><%= prod.price %></em>
+			</a>
+		</li>
+		<% } %>
+	
+</body>
+</html>

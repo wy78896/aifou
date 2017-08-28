@@ -3,7 +3,6 @@ require(["config"],function(){
 		
 		$.getJSON("/mock/recommend.json",function(data){
 			var html = template("prod_item",{list:data});
-			console.log(html)
 			$(html).appendTo(".product");
 		})
 		
