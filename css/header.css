@@ -62,6 +62,41 @@ a {
     padding: 0 20px; }
   .user div a {
     color: #333; }
+  .user .login {
+    position: relative; }
+    .user .login .menu {
+      display: none;
+      position: absolute;
+      z-index: 50;
+      left: 50%;
+      margin-top: -1px;
+      margin-left: -75px;
+      width: 150px;
+      height: 186px;
+      line-height: 40px;
+      border: 1px solid #e5e5e5;
+      padding: 12px 0;
+      background-color: #fff;
+      box-shadow: 0px 5px 10px 0 #ccc; }
+      .user .login .menu ul {
+        list-style: none;
+        font-size: 14px; }
+        .user .login .menu ul .listItem a {
+          padding: 0;
+          display: block;
+          text-align: center;
+          line-height: 40px;
+          font-size: 14px; }
+        .user .login .menu ul .listItem a:hover {
+          background-color: #23A86F;
+          color: #fff; }
+        .user .login .menu ul .boderBottom {
+          width: 108px;
+          height: 2px;
+          background-color: #e5e5e5;
+          margin: 12px auto; }
+  .user .success:hover .menu {
+    display: block; }
 
 .user div:hover a {
   color: #23A96F; }
@@ -89,5 +124,140 @@ a {
     .headerW ul li:hover a {
       color: #23A96F;
       border-bottom: 2px solid #23A96F; }
+
+.login-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .login-modal .wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 430px;
+    margin: -240px 0 0 -215px;
+    background-color: #fff; }
+    .login-modal .wrap .wrap-title {
+      height: 55px;
+      line-height: 54px;
+      text-align: center;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 16px;
+      color: #666; }
+  .login-modal .m-form {
+    padding: 54px; }
+    .login-modal .m-form .formitm {
+      float: left;
+      width: 100%;
+      margin-top: 20px; }
+    .login-modal .m-form .formitm:first-child {
+      margin-top: 0; }
+      .login-modal .m-form .formitm:first-child .ipt #phone {
+        display: inline-block;
+        width: 286px;
+        height: 30px;
+        padding: 4px 17px;
+        line-height: 30px;
+        border: 1px solid #e5e5e5;
+        font-size: 16px;
+        outline: none; }
+    .login-modal .m-form .verification {
+      position: relative;
+      height: 40px;
+      vertical-align: bottom; }
+      .login-modal .m-form .verification .ipt #htcode {
+        width: 156px;
+        font-size: 16px;
+        vertical-align: middle;
+        display: inline-block;
+        height: 30px;
+        padding: 4px 17px;
+        line-height: 30px;
+        border: 1px solid #e5e5e5;
+        outline: none; }
+      .login-modal .m-form .verification .ipt img {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 0;
+        width: 120px;
+        height: 38px; }
+    .login-modal .m-form .phonecode {
+      position: relative; }
+      .login-modal .m-form .phonecode .ipt #phonecode {
+        width: 156px;
+        font-size: 16px;
+        vertical-align: middle;
+        display: inline-block;
+        height: 30px;
+        padding: 4px 17px;
+        line-height: 30px;
+        border: 1px solid #e5e5e5;
+        outline: none; }
+      .login-modal .m-form .phonecode .ipt #getphonecode {
+        display: inline-block;
+        width: 125px;
+        vertical-align: middle;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border: none;
+        border-radius: 2px;
+        text-align: center;
+        color: #fff;
+        background-color: #23a96f;
+        outline: none;
+        cursor: pointer; }
+      .login-modal .m-form .phonecode .ipt #getphonecode:hover {
+        background-color: #37eb9d; }
+      .login-modal .m-form .phonecode .ipt .tip {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 14px;
+        cursor: wait;
+        width: 85px;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
+        padding: 0 20px;
+        border: none;
+        border-radius: 2px;
+        text-align: center;
+        color: #fff;
+        outline: none; }
+    .login-modal .m-form .button {
+      margin: 40px auto 30px auto; }
+      .login-modal .m-form .button .ipt .u-btn {
+        display: inline-block;
+        width: 100%;
+        font-size: 16px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border: none;
+        border-radius: 2px;
+        text-align: center;
+        color: #fff;
+        background-color: #23a96f;
+        outline: none;
+        cursor: pointer; }
+      .login-modal .m-form .button .ipt .u-btn:hover {
+        background-color: #37eb9d; }
+  .login-modal .icon-close {
+    font-size: 20px;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-position: -594px -294px; }
 
 /*# sourceMappingURL=header.css.map */

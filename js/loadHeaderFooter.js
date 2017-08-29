@@ -3,10 +3,12 @@ define(["jquery","cookie"],function($){
 		type:'get',
 		url:"/html/include/header.html",
 		success:function(data){
-			var _username = $.cookie("loginUser");
+			var _username = $.cookie("username");
 			if(_username){//存在登录成功的用户
-				$(data).filter(".login")
+				$(data).find(".logina")
 					.html(_username).end()
+					.find(".logina").removeClass("sss").end()
+					.find(".login").addClass("success").end()
 					.appendTo(".head");
 			}else{
 				$(data).appendTo(".head");

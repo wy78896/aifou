@@ -12,7 +12,20 @@
 		</a>
 	</div>
 	<div class="user">
-		<div class="login"><a>登录</a></div>
+		<div class="login">
+			<a class="logina sss">登录</a>
+			<div class="menu">
+                <i class="i-icon arrow"></i>
+                <ul>
+                    <li class="listItem"><a>我的地址</a></li>
+                    <li class="listItem"><a>我的账户</a></li>
+                    <li class="boderBottom"></li>
+                    <li class="listItem"><a>常见问题</a></li>
+                    <li class="listItem"><a class="signout">退出登录</a></li>
+                </ul>
+            </div>
+
+		</div>
 		<div class="order"><a href="#">我的订单</a></div>
 	</div>
 	
@@ -25,3 +38,169 @@
 		<li><a href="#">精选配件</a></li>
 	</ul>
 </div>
+
+
+<div class="login-modal">
+	<div class="wrap">
+		<div class="wrap-title">爱否商城欢迎您</div>
+		<div class="m-form">
+			<div class="formitm">
+				<div class="ipt">
+					<input type="text" id="phone" placeholder="手机号" />
+				</div>
+			</div>
+			<div class="formitm verification">
+				<div class="ipt">
+					<input type="text" id="htcode" placeholder="验证码" />
+					<img src="" id="checkcode" />
+				</div>
+			</div>
+			<div class="formitm phonecode">
+				<div class="ipt">
+					<input type="text" id="phonecode" placeholder="手机验证码" />
+					<button type="button" id="getphonecode">获取手机验证码</button>
+					<p class="tip" >60</p>
+				</div>
+			</div>
+			<div class="formitm button">
+				<div class="ipt">
+					<button type="button" class="u-btn">登录</button>
+				</div>
+			</div>
+		</div>
+		<i class="iconfont icon-close"></i>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(".sss").click(function(){
+		$(".login-modal").show();
+	});
+	$(".icon-close").click(function(){
+		$(".login-modal").hide();
+		
+		$('#phone').val('');
+		$('#htcode').val('');
+		$('#phonecode').val('');
+		
+		$("input").css({"border":"1px solid #e5e5e5"});
+		clearInterval(timer);
+		$(".tip").hide();
+		$(".tip").html(60);
+	});
+	
+		
+
+	//点击图片切换验证码
+	$("#checkcode").click(function(){
+		var _url = "http://route.showapi.com/932-2?showapi_appid=41236&showapi_sign=50447b60c66d4786bdc8e265992cf337&length=4&specials=false&";
+		$.getJSON(_url, function(responseData){
+			var data = responseData.showapi_res_body;
+			// 显示验证码图片
+			$("#checkcode").attr("src", data.image);
+			// 缓存该接口要用到的 SID 数据到图像元素上
+			$("#checkcode").data("sid", data.sid);
+		});
+	}).click();
+	
+	
+		
+	var inputs = $(".ipt").children("input");
+	for (var i = 0; i< inputs.length; i++) {
+		inputs.eq(i).focus(function(){
+			$(this).css({"border":"1px solid #333"});
+		})
+		inputs.eq(i).blur(function(){
+			$(this).css({"border":"1px solid #e5e5e5"});
+			
+		})
+	}
+	
+	//验证手机号、验证码
+	var phoneError = true,
+		htcodeError = true,
+		phonecodeError = true;
+	
+	//    /^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/
+	inputs.eq(0).blur(function(){
+		var reg = /^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/;
+		if(!reg.test($(this).val())){
+			$(this).css({"border":"1px solid red"});
+			phoneError = true;
+		}else{
+			phoneError = false;
+		}
+		
+	})
+	
+	//验证验证码输入
+	$("#htcode").blur(function(){
+		var _url = "http://route.showapi.com/932-1?showapi_appid=41236&showapi_sign=50447b60c66d4786bdc8e265992cf337&checkcode="+$(this).val()+"&sid="+ $("#checkcode").data("sid");
+		$.get(_url, function(resData){
+			if (resData.showapi_res_body.valid) {
+				$("#htcode").css({"border":"1px solid #e5e5e5"});
+				htcodeError = false;
+			} else {
+				//$("#htcode").val("验证码输入有误");
+				$("#htcode").css({"border":"1px solid red"});
+				htcodeError = true;
+			}
+		});
+	})
+	
+	//获取手机验证码
+	var timer;
+	$("#getphonecode").click(function(){
+		if(!phoneError){
+			$(".tip").show();
+		
+			var diff;
+			
+			var _deadline = +new Date() + 60000;
+			timer = setInterval(function(){
+				$(".tip").html(djs(_deadline));
+				if(diff === 0){
+					clearInterval(timer);
+					$(".tip").hide();
+				}
+			},1000);
+			
+			function djs(_deadline){
+				var _now = +new Date();
+				diff = Math.ceil((_deadline - _now) / 1000);
+				var _second = ("0"+diff % 60).slice(-2);
+				return _second;
+			}
+		}
+		else{
+			inputs.eq(0).css({"border":"1px solid red"});
+		}
+		
+		
+	})
+	
+	//验证手机验证码
+
+	inputs.eq(2).blur(function(){
+		var reg = /^[0-9]{4}$/;
+		if(!reg.test($(this).val())){
+			$(this).css({"border":"1px solid red"});
+			phonecodeError = true;
+		}else{
+			phonecodeError = false;
+		}
+		
+	})
+	
+	//登录
+	$(".u-btn").click(function(){
+		if (phoneError || htcodeError || phonecodeError){
+			return;
+			
+		}
+		$.cookie("username", $("#phone").val(), {expires:7, path:"/"});	
+		$(".login-modal").hide();
+		location.reload()
+		
+	})
+</script>
