@@ -3,6 +3,11 @@ require(["config"],function(){
 		$.getJSON("/mock/product-list.json",function(data){
 			var html = template("prod_item",{list:data});
 			$(html).appendTo(".product-list");
+			
+			console.log($(".g").children("a"));
+			$(".g").children("a").click(function(){
+				$(this).attr({"href":"/html/detail.html"})
+			})
 		});
 		
 		
@@ -20,7 +25,6 @@ require(["config"],function(){
 				
 			});
 		}
-		
 		
 		
 	});

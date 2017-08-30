@@ -200,7 +200,13 @@
 		}
 		$.cookie("username", $("#phone").val(), {expires:7, path:"/"});	
 		$(".login-modal").hide();
-		location.reload()
+		location.reload();
 		
+	})
+	
+	//退出登录
+	$(".signout").click(function(){
+		$.cookie("username", $("#phone").val(), {expires:-1, path:"/"});
+		location.reload();
 	})
 </script>
