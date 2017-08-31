@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/cart.css"/>
+		<link rel="stylesheet" type="text/css" href="/font/iconfont.css"/>
+		<script type="text/javascript" src="/lib/requirejs/require.js" data-main="/js/cart"></script>
+	</head>
+	<body>
+		
+		<div class="head"></div>
+		
+		<form>
+			<div class="buy-step">
+				<i class="leftLine"></i>
+				<i class="rightLine"></i>
+				<p class="left">
+					<i></i>
+					<span>购物车</span>
+				</p>
+				<p class="center">
+					<i></i>
+					<span>确认支付</span>
+				</p>
+				<p class="right">
+					<i></i>
+					<span>购物成功</span>
+				</p>
+			</div>
+			<div class="cartList">
+				<a href="/index.html" class="continue">
+					<i><</i>
+					<span>继续购物</span>
+				</a>
+				<ul class="cartTitle">
+					<li class="name">产品名称</li>
+					<li class="price">单价</li>
+					<li class="num">数量</li>
+					<li class="count">小计</li>
+					<li class="action">操作</li>
+				</ul>
+				<ul class="cartInfo">
+					
+				</ul>
+			</div>
+		</form>
+		
+		<div class="footer" style="margin-top: 100px;"></div>
+		
+		<script type="text/html" id="prod_item">
+			
+			<%for(var i = 0;i<products.length;i++){
+				var prod = products[i];
+			%>
+			<li>
+				<div class="cell name">
+					<div class="check"></div>
+					<a href="#" class="info">
+						<img src="<%= prod.imgSrc %>"/>
+						<div class="details">
+							<strong><%= prod.name %></strong>
+							<p>
+								<span>颜色：</span>
+								<span><%= prod.color %></span>
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="cell price">
+					<span><%= prod.price %></span>
+				</div>
+				<div class="cell num">
+					<div class="cartcount">
+						<a class="jian">-</a>
+						<input type="text" id="num" value="<%= prod.num %>" />
+						<a class="jia">+</a>
+					</div>
+				</div>
+				<div class="cell count">
+					<span>￥<%= prod.price.slice(1)*prod.num %>.00</span>
+				</div>
+				<div class="cell action">
+					<a href="">
+						<i class="iconfont icon-shanchu"></i>
+					</a>
+				</div>
+			</li>
+			<% } %>
+		
+	</body>
+</html>

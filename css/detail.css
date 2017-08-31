@@ -208,4 +208,15 @@
     color: #666;
     font-weight: normal; }
 
+.productInfo {
+  padding-top: 30px;
+  width: 1180px;
+  margin: 0 41.5px; }
+  .productInfo .p_content {
+    margin-top: 30px;
+    width: 750px;
+    margin: 0 auto; }
+    .productInfo .p_content p img {
+      width: 100%; }
+
 /*# sourceMappingURL=detail.css.map */

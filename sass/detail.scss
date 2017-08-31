@@ -246,3 +246,19 @@
         font-weight: normal;
     }
 }
+
+.productInfo{
+    padding-top: 30px;
+    width: 1180px;
+    margin: 0 41.5px;
+    .p_content{
+        margin-top: 30px;
+        width: 750px;
+        margin: 0 auto;
+        p{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
